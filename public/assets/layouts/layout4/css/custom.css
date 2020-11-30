@@ -1,0 +1,130 @@
+.toggleFilter{
+	display: none
+}
+.question{
+	font-weight: 800;
+	margin-bottom: 10px;
+	cursor: pointer
+}
+.enquiry_list{
+	margin:0;
+	padding: 0;
+	list-style:none;
+}
+.enquiry_list li:before{
+	content: "";
+	font-family: FontAwesome;
+	margin-right: 5px;
+}
+
+/*RESULTS PER PAGE*/
+.resultsPerPage span, .resultsPerPage .form-group {
+    display: inline-block;
+    margin-right: 5px;
+    vertical-align: top;
+}
+.resultsPerPage .form-group .form-control {
+    height: auto;
+    padding: 0 5px;
+    line-height: inherit;
+}
+
+/*RESULTS PER PAGE END */
+
+
+.enquiry .form-group{
+    display: inline-block;
+    vertical-align: top;
+	width:21%;
+	margin-right: 15px;
+	margin-bottom: 0;
+}
+.enquiry .form-group:last-child{
+	width:8.6%;
+	margin-right: 0;
+}
+.enquiry .form-group .btn{
+	float:right;
+	width:100%
+}
+#newEnquiryForm.portlet-body{
+	padding:25px 30px;
+}
+.enquiry{
+	display:none;
+}
+.overlay_container{
+	position: relative;
+}
+.overlay{
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+    background: #fff;
+    top: 0;
+    bottom: 0;
+    line-height: 36px;
+    display: none
+}
+.overlay_container:hover .overlay{
+	display: block;
+	cursor: pointer;
+}
+@media only screen and (max-width: 480px){
+	.enquiry .form-group{
+	    width: 100%;
+		margin: 0 0 10px;
+	}
+	.enquiry .form-group:last-child{
+	    width: 25%;
+	}
+}
+
+@media only screen and (min-width: 686px) and  (max-width: 729px){
+	.enquiry .form-group{
+	     width: 31.9%;
+		margin: 0 10px 10px 0;
+	}
+	.enquiry .form-group:last-child, .enquiry .form-group:nth-child(3){
+	    margin-right:0 ;
+	}
+	.enquiry .form-group:last-child{
+		width:15.6%;
+	}
+}
+@media only screen and (min-width: 481px) and  (max-width: 685px){
+	.enquiry .form-group{
+	     width: 47.9%;
+		margin: 0 10px 10px 0;
+	}
+	.enquiry .form-group:last-child, .enquiry .form-group:nth-child(2), .enquiry .form-group:nth-child(4){
+	    margin-right:0 ;
+	}
+	.enquiry .form-group:last-child{
+		width:18.6%;
+	}
+}
+@media only screen and (min-width: 730px) and  (max-width: 991px){
+	.enquiry .form-group{
+	    width: 21%;
+		margin: 0 0 10px;
+	}
+	.enquiry .form-group:last-child{
+	    width: 13.6%;
+	}
+}
+
+@media only screen and (min-width: 992px) and  (max-width: 1334px){
+	.enquiry .form-group{
+	     width: 31.9%;
+		margin: 0 10px 10px 0;
+	}
+	.enquiry .form-group:last-child, .enquiry .form-group:nth-child(3){
+	    margin-right:0 ;
+	}
+	.enquiry .form-group:last-child{
+		width:15.6%;
+	}
+}
+
