@@ -134,12 +134,20 @@
                                         </thead>
                                         <tbody>
                                         @foreach($students as $key => $value)
+<<<<<<< HEAD
                                                 @if($value->stage_id < 2)
+=======
+                                                @if($value->status == 0)
+>>>>>>> 9e2f27826b7f0df57a741be20fafe2516b34ae7f
                                                  <tr class="danger">
                                                 @else
                                                  <tr class="succes">
                                                 @endif
+<<<<<<< HEAD
                                                 <td> {{ $value->created_at->format('d-m-Y') }}</td>
+=======
+                                                <td>{{ $value->created_at->format('d-m-Y') }}</td>
+>>>>>>> 9e2f27826b7f0df57a741be20fafe2516b34ae7f
                                                 <td>{{ $value->student_id }}</td>
                                                 <td>{{ $value->name }}</td>
                                                 <td>{{ $value->email }}</td>

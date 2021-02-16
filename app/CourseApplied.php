@@ -98,8 +98,11 @@ class CourseApplied extends Model
             'confirmed_remarks'            => NULL
         ];
         $response = CourseApplied::find($id)->update($update_data);
+<<<<<<< HEAD
         $data['success'] = 1;
         $data['message'] = "Course has been removed!";
         echo json_encode($data);
+=======
+>>>>>>> 9e2f27826b7f0df57a741be20fafe2516b34ae7f
     }
 }

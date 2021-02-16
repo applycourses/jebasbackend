@@ -114,6 +114,10 @@ class CourseController extends Controller
         if($request->remove_shortlisted == 'yes')
         {
              $response =  CourseApplied::course_removed($id);
+<<<<<<< HEAD
+=======
+
+>>>>>>> 9e2f27826b7f0df57a741be20fafe2516b34ae7f
                 $logs_data =  [
                     'category_id' =>  $id ,
                     'action'      => 'Removed from Shortlist'
