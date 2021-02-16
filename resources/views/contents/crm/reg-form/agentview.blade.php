@@ -89,13 +89,13 @@
                                                                     <th>Relationship with the Dependant</th>
                                                                     <th>Wanna Take ?</th>
                                                                 </tr>
-                                                                @foreach(json_decode($data->step1['dependent']) as $key => $value)
+                                                                @foreach(($data->step1['dependent']) as $key => $value)
 
                                                                     <tr>
                                                                         <td> {{ ++$key }}</td>
-                                                                        <td>{{ $value->name }}</td>
-                                                                        <td>{{ $value->relation }}</td>
-                                                                        <td> {{ ($value->take == "true") ? 'Yes' : 'No'}} </td>
+                                                                        <td>{{ $value['name'] }}</td>
+                                                                        <td>{{ $value['relation'] }}</td>
+                                                                        <td> {{ ($value['take'] == "true") ? 'Yes' : 'No'}} </td>
                                                                     </tr>
                                                                 @endforeach
 

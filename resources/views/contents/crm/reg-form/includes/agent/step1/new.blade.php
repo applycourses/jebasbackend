@@ -103,18 +103,63 @@
                                                                         <th>Take With You?</th>
                                                                         </thead>
                                                                         <tbody>
-                                                                       @foreach(json_decode($data['dependent']) as $key => $value)
+                                                                       @foreach(($data['dependent']) as $key => $value)
                                                                             <tr>
                                                                                 <td> {{ ++$key }}</td>
                                                                                 <td>
-                                                                                    <input type="text" class="form-control" placeholder="ex. John Paul" name="depedents_name[]" required="" value="{{ $value->name }}">
-                                                                                </td>
-                                                                                <td>
-                                                                                    <input type="text" class="form-control" name="depedents_relation[]" placeholder="ex. Father ...." required=""  value="{{ $value->relation }}">
+                                                                                    <input type="text" class="form-control" placeholder="ex. John Paul" name="depedents_name[]" required="" value="{{ $value['name'] }}">
                                                                                 </td>
                                                                                 <td>
 
-                                                                                        <label><input type="checkbox" name="depedents_take[]" value="true" {{ ($value->take == 'true') ? 'checked' : '' }} > </label>
+<select name="depedents_relation[]" class="form-control" required>
+                                    <option value="">Choose Relationship:</option>
+                                    <option <?php if($value['relation'] == 'Mother'){ echo 'selected'; }?>>Mother</option>
+                                    <option <?php if($value['relation'] == 'Father'){ echo 'selected'; }?>>Father</option>
+                                    <option <?php if($value['relation'] == 'Spouse'){ echo 'selected'; }?>>Spouse</option>
+                                    <option <?php if($value['relation'] == 'Daughter'){ echo 'selected'; }?>>Daughter</option>
+                                    <option <?php if($value['relation'] == 'Son'){ echo 'selected'; }?>>Son</option>
+                                    <option <?php if($value['relation'] == 'Sister'){ echo 'selected'; }?>>Sister</option>
+                                    <option <?php if($value['relation'] == 'Brother'){ echo 'selected'; }?>>Brother</option>
+                                    <option <?php if($value['relation'] == 'Auntie'){ echo 'selected'; }?>>Auntie</option>
+                                    <option <?php if($value['relation'] == 'Uncle'){ echo 'selected'; }?>>Uncle</option>
+                                    <option <?php if($value['relation'] == 'Niece'){ echo 'selected'; }?>>Niece</option>
+                                    <option <?php if($value['relation'] == 'Nephew'){ echo 'selected'; }?>>Nephew</option>
+                                    <option <?php if($value['relation'] == 'Cousin (female)'){ echo 'selected'; }?>>Cousin (female)</option>
+                                    <option <?php if($value['relation'] == 'Cousin (male)'){ echo 'selected'; }?>>Cousin (male)</option>
+                                    <option <?php if($value['relation'] == 'Grandmother'){ echo 'selected'; }?>>Grandmother</option>
+                                    <option <?php if($value['relation'] == 'Grandfather'){ echo 'selected'; }?>>Grandfather</option>
+                                    <option <?php if($value['relation'] == 'Granddaughter'){ echo 'selected'; }?>>Granddaughter</option>
+                                    <option <?php if($value['relation'] == 'Grandson'){ echo 'selected'; }?>>Grandson</option>
+                                    <option <?php if($value['relation'] == 'Stepsister'){ echo 'selected'; }?>>Stepsister</option>
+                                    <option <?php if($value['relation'] == 'Stepbrother'){ echo 'selected'; }?>>Stepbrother</option>
+                                    <option <?php if($value['relation'] == 'Stepmother'){ echo 'selected'; }?>>Stepmother</option>
+                                    <option <?php if($value['relation'] == 'Stepfather'){ echo 'selected'; }?>>Stepfather</option>
+                                    <option <?php if($value['relation'] == 'Stepdaughter'){ echo 'selected'; }?>>Stepdaughter</option>
+                                    <option <?php if($value['relation'] == 'Stepson'){ echo 'selected'; }?>>Stepson</option>
+                                    <option <?php if($value['relation'] == 'Sibling (gender neutral)'){ echo 'selected'; }?>>Sibling (gender neutral)</option>
+                                    <option <?php if($value['relation'] == 'Parent (gender neutral)'){ echo 'selected'; }?>>Parent (gender neutral)</option>
+                                    <option <?php if($value['relation'] == 'Child (gender neutral)'){ echo 'selected'; }?>>Child (gender neutral)</option>
+                                    <option <?php if($value['relation'] == 'Sibling of Parent (gender neutral)'){ echo 'selected'; }?>>Sibling of Parent (gender neutral)</option>
+                                    <option <?php if($value['relation'] == 'Child of Sibling (gender neutral)'){ echo 'selected'; }?>>Child of Sibling (gender neutral)</option>
+                                    <option <?php if($value['relation'] == 'Cousin (gender neutral)'){ echo 'selected'; }?>>Cousin (gender neutral)</option>
+                                    <option <?php if($value['relation'] == 'Grandparent (gender neutral)'){ echo 'selected'; }?>>Grandparent (gender neutral)</option>
+                                    <option <?php if($value['relation'] == 'Grandchild (gender neutral)'){ echo 'selected'; }?>>Grandchild (gender neutral)</option>
+                                    <option <?php if($value['relation'] == 'Step-sibling (gender neutral)'){ echo 'selected'; }?>>Step-sibling (gender neutral)</option>
+                                    <option <?php if($value['relation'] == 'Step-parent (gender neutral)'){ echo 'selected'; }?>>Step-parent (gender neutral)</option>
+                                    <option <?php if($value['relation'] == 'Stepchild (gender neutral)'){ echo 'selected'; }?>>Stepchild (gender neutral)</option>
+                                    <option <?php if($value['relation'] == 'Other'){ echo 'selected'; }?>>Other</option>
+                                </select>
+
+
+                                                                                    
+                                                                                </td>
+                                                                                <td>
+<select class="form-control" name="depedents_take[]" required>
+                                        <option value="">Select Option</option>
+                                        <option <?php if($value['take']=='1'){ echo "selected"; } ?> value="1">Yes</option>
+                                        <option <?php if($value['take']=='0'){ echo "selected"; } ?> value="0">No</option>
+                                    </select> 
+                                                                                       
 
                                                                                 </td>
                                                                             </tr>

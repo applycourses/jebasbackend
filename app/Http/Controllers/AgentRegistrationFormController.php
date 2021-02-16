@@ -317,11 +317,11 @@ class AgentRegistrationFormController extends Controller
                 $dependent[] = [
                     'name'     => $value ,
                     'relation' => $request->depedents_relation[$i],
-                    'take'     => (isset($request->depedents_take[$i])) ? "true" : "false"
+                    'take'     => $request->depedents_take[$i]
                 ];
             }
         }
-        return json_encode($dependent);
+        return ($dependent);
     }
 
 
