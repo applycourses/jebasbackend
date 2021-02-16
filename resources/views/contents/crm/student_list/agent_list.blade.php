@@ -144,7 +144,7 @@
                                                 <td>{{ $value->student_id }}</td>
                                                 <td>{{ $value->name }}</td>
                                                 <td>{{ $value->email }}</td>
-                                                <td>{{ $value->country }}</td>
+                                                <td>{{ get_country_name($value->country) }}</td>
                                                 <td>{{ $value->dob }}</td>
                                                 <td>{{ $value->phone }}</td>
                                                 <td>{{ getStageNameBased($value->stage_id) }}</td>
