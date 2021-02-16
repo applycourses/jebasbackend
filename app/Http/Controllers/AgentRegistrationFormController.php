@@ -206,7 +206,7 @@ class AgentRegistrationFormController extends Controller
         }else{
             $request->session()->flash('message','You have Already Completed  Step 1');
         }
-        return redirect('/student?view=registration_form&student_id='.$request->student_id);
+        return redirect('/agentstudent?view=registration_form&student_id='.$request->student_id);
 
     }
     public function submitRegTwoForm(Request $request){
@@ -270,7 +270,8 @@ class AgentRegistrationFormController extends Controller
             Session::flash('message', 'Successfully updated the step 1 of registration form !');
             $data = [ 'student_id' =>$user->id, 'activity' => "Registration Step 1 Updated" ];
             insertAdminLog($data);
-            return redirect('/student?view=registration_form&student_id='.$request->student_id);
+            return redirect('/agentstudent?view=registration_form&student_id='.$user->id);
+            die();
         }
 
     }

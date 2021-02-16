@@ -32,7 +32,7 @@
             </ul>
             <div class="row">
                 <div class="col-md-12">
-                    @include('contents.crm.includes.view_bar')
+                    @include('contents.crm.includes.agent_view_bar')
                     <div class="portlet box blue">
                         <div class="portlet-title">
                             <div class="caption"> <i class="fa fa-eye"></i>Documents View</div>
